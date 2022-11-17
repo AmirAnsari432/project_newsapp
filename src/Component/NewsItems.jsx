@@ -17,7 +17,6 @@ export class NewsItems extends Component {
           />
           <div className="card-body">
             <h5 className="card-title  "> {title} </h5>
-
             <p className="card-text">{discription}</p>
             <p className="card-text">
               By {author ? author : "Unknown "}on-
