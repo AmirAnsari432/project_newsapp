@@ -94,6 +94,8 @@ export class News extends Component {
                     discription={element.description}
                     imageUrl={element.urlToImage}
                     NewsUrl={element.url}
+                    author={element.author}
+                    date={element.publishedAt}
                   />
                 </div>
               );
