@@ -4,7 +4,7 @@ import News from "./Component/News";
 // import {BrowserRouter, Routes} from 'react-router-dom'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
-  let pageSize = 6;
+  let pageSize = 9;
   return (
     <div>
       <BrowserRouter>
