@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./App.css";
 import Navbar from "./Component/NavBar";
 import News from "./Component/News";
 import { useState } from "react";
@@ -7,10 +7,8 @@ import LoadingBar from "react-top-loading-bar";
 function App() {
 
   const [progress, setProgress] = useState(0);
-  // const [progress, setProgress] = useState(0);
-  //  progress = 0,
-  // const setProgrees = {progress}
-  const pageSize = 9;
+ 
+  const pageSize = 5;
   return (
     <div>
       <BrowserRouter>
@@ -19,7 +17,7 @@ function App() {
         height={3}
           color="#f11946"
           progress={progress}
-          onLoaderFinished={() => setProgress(0)}
+         
         />
         <Routes>
           <Route
