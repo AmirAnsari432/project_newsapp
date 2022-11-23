@@ -5,27 +5,21 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 function App() {
-
   const [progress, setProgress] = useState(0);
- 
+
   const pageSize = 5;
   return (
     <div>
       <BrowserRouter>
         <Navbar />
-        <LoadingBar
-        height={3}
-          color="#f11946"
-          progress={progress}
-         
-        />
+        <LoadingBar height={4} color="#f11946" progress={progress} />
         <Routes>
           <Route
             exact
             path="/"
             element={
               <News
-                 setProgrees={setProgress}
+                setProgress={setProgress}
                 key={"general"}
                 pageSize={pageSize}
                 country="in"
@@ -38,7 +32,7 @@ function App() {
             path="/business"
             element={
               <News
-                 setProgrees={setProgress}
+                setProgress={setProgress}
                 key={"business"}
                 pageSize={pageSize}
                 country="in"
@@ -51,7 +45,7 @@ function App() {
             path="/entertainment"
             element={
               <News
-                 setProgrees={setProgress}
+                setProgress={setProgress}
                 key={"entertainment"}
                 pageSize={pageSize}
                 country="in"
@@ -64,7 +58,7 @@ function App() {
             path="/general"
             element={
               <News
-                 setProgrees={setProgress}
+                setProgress={setProgress}
                 key={"general"}
                 pageSize={pageSize}
                 country="in"
@@ -77,7 +71,7 @@ function App() {
             path="/health"
             element={
               <News
-                 setProgrees={setProgress}
+                setProgress={setProgress}
                 key={"health"}
                 pageSize={pageSize}
                 country="in"
@@ -90,7 +84,7 @@ function App() {
             path="/science"
             element={
               <News
-                 setProgrees={setProgress}
+                setProgress={setProgress}
                 key={"science"}
                 pageSize={pageSize}
                 country="in"
@@ -103,7 +97,7 @@ function App() {
             path="/sports"
             element={
               <News
-                 setProgrees={setProgress}
+                setProgress={setProgress}
                 key={"sports"}
                 pageSize={pageSize}
                 country="in"
@@ -116,7 +110,7 @@ function App() {
             path="/technology"
             element={
               <News
-                 setProgrees={setProgress}
+                setProgress={setProgress}
                 key={"technology"}
                 pageSize={pageSize}
                 country="in"
