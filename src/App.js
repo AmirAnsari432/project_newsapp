@@ -7,7 +7,7 @@ import LoadingBar from "react-top-loading-bar";
 function App() {
   const [progress, setProgress] = useState(0);
 
-  const pageSize = 5;
+  const pageSize = 6;
   return (
     <div>
       <BrowserRouter>
