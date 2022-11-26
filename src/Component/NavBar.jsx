@@ -1,8 +1,17 @@
-import React from "react";
-import {  Link } from "react-router-dom";
+import React ,{useEffect} from "react";
+import {  Link , useLocation } from "react-router-dom";
+
 
 
 const Navbar =() => {
+  let location = useLocation ();
+
+  
+  useEffect(() => {
+    console.log(location.pathname)
+    
+  }, [location]);
+
 
   
 
@@ -26,13 +35,13 @@ const Navbar =() => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/general">
+                <Link className={`nav-link ${location.pathname === "/general" ? "active" : ""}`} aria-current="page" to="/general">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link active"
+                  className={`nav-link ${location.pathname === "/business" ? "active" : ""}`}
                   aria-current="page"
                   to="/business"
                 >
@@ -41,7 +50,7 @@ const Navbar =() => {
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link active"
+                  className={`nav-link ${location.pathname === "/entertainment" ? "active" : ""}`}
                   aria-current="page"
                   to="/entertainment"
                 >
@@ -59,7 +68,7 @@ const Navbar =() => {
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link active"
+                  className={`nav-link  ${location.pathname === "/health" ? "active" : ""}`}
                   aria-current="page"
                   to="/health"
                 >
@@ -68,7 +77,7 @@ const Navbar =() => {
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link active"
+                  className={`nav-link  ${location.pathname === "/science" ? "active" : ""}`}
                   aria-current="page"
                   to="/science"
                 >
@@ -77,7 +86,7 @@ const Navbar =() => {
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link active"
+                  className={`nav-link  ${location.pathname === "/sports" ? "active" : ""}`}
                   aria-current="page"
                   to="/sports"
                 >
@@ -86,7 +95,7 @@ const Navbar =() => {
               </li>
               <li className="nav-item">
                 <Link
-                  className="nav-link active"
+                  className={`nav-link  ${location.pathname === "/technology" ? "active" : ""}`}
                   aria-current="page"
                   to="/technology"
                 >
